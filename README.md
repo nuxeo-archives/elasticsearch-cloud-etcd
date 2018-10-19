@@ -1,6 +1,13 @@
 Etcd Cloud Plugin for etcd
 ==========================
 
+
+# Deprecated
+
+This plugin is deprecated and no more followed or maintained.
+
+# Info
+
 The etcd Cloud plugin allow to use etcd for the unicast discovery mechanism.
 
 
@@ -12,11 +19,11 @@ The purpose of that plugin is to discover the transport adresses of the other El
 
 Let's say you have this configuration stored in etcd :
 
-	/services/<<myclustername>>/1/transport: {"host":"127.0.0.1","port":9300} 
+	/services/<<myclustername>>/1/transport: {"host":"127.0.0.1","port":9300}
 	/services/<<myclustername>>/2/transport: {"host":"127.0.0.1","port":9301}
-	/services/<<myclustername>>/3/transport: {"host":"127.0.0.1","port":9302} 
+	/services/<<myclustername>>/3/transport: {"host":"127.0.0.1","port":9302}
 
-With this elasticsearch configuration : 
+With this elasticsearch configuration :
 
 ```yaml
   cloud:
@@ -27,7 +34,7 @@ With this elasticsearch configuration :
           type: etcd
 ```
 
-Then elasticsearch will use unicast discovery and try to connect to the other nodes using the transport addresses set in etcd. 
+Then elasticsearch will use unicast discovery and try to connect to the other nodes using the transport addresses set in etcd.
 
 
 
